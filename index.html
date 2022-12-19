@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM EVENTS</title>
+</head>
+<body>
+    <h1>DOM er ajke special events</h1>
+<button onclick="console.log('I am click')">Click Me</button>
+<button onclick="console.log('hello')">Another button</button>
+<button onclick="console.log(7)">Hello gays</button>
+<button onclick="console.log('dont forget me')">Don't forget me</button>
+<br>
+<button onclick="document.body.style.backgroundColor = 'yellow'">Make Yellow</button>
+<button onclick="document.body.style.backgroundColor = 'green'">Make Green</button>
+<button onclick="console.log(makeRed())">Make red</button>
+<button onclick="console.log(makeBlue())">Make blue</button>
+    <script src="js/events.js"></script>
+    <script>
+        function makeRed(){
+            document.body.style.backgroundColor = 'red';
+        }
+        function makeBlue(){
+            document.body.style.backgroundColor = 'blue';
+        }
+    </script>
+</body>
+</html>
