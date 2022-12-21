@@ -4,9 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Even Summary</title>
+    <title>Even Dom Summary</title>
 </head>
 <body>
- <h1>Hello Events</h1>   
+ <h1>Final Dom Events Handlers</h1>
+ <h3 id="handle-status">Default Text</h3>
+ <p id="input-text-display">Default Input Text</p>
+ <input id="input-field" type="text">
+ <button id="btn-update">update</button>
+ <br>
+ <br>
+ <button onclick="handleOnClick()">Handle Event by Add onclick function</button>
+ <button id="event-listener">Handle event by addEventListener</button>
+ 
+ 
+ <script>
+    function handleOnClick(){
+    const handlerStatus = document.getElementById('handle-status');
+    handlerStatus.innerText = 'hellow bro, you are a wonderful man'
+    }  
+    
+    // Option -2
+    document.getElementById('event-listener').addEventListener('click', function(){
+        const handlerStatus = document.getElementById('handle-status');
+        handlerStatus.innerText = 'how are you bro'
+    })
+
+    document.getElementById('btn-update').addEventListener('click', function(){
+        const inputField = document.getElementById('input-field');
+        const inputText = inputField.value;
+
+        const p = document.getElementById('input-text-display');
+        p.innerText = inputText;
+        inputText.value = '';
+    })
+    
+ </script>
 </body>
 </html>
